@@ -2,7 +2,7 @@ import { gql } from '@apollo/client';
 
 export const DEACTIVATE_SCHEMA_ENTRY = gql`
 	mutation deactivateSchema($id: Int!) {
-		deactivateSchema(id: $id) {
+		deactivateSchema: gql_deactivateSchema(id: $id) {
 			id
 			isActive
 		}
@@ -10,7 +10,7 @@ export const DEACTIVATE_SCHEMA_ENTRY = gql`
 `;
 export const ACTIVATE_SCHEMA_ENTRY = gql`
 	mutation activateSchema($id: Int!) {
-		activateSchema(id: $id) {
+		activateSchema: gql_activateSchema(id: $id) {
 			id
 			isActive
 		}
