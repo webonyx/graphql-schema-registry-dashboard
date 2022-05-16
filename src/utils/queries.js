@@ -2,12 +2,12 @@ import { gql } from '@apollo/client';
 
 export const PERSISTED_QUERIES_COUNT = gql`
 	query persistedQueriesCount {
-		persistedQueriesCount
+		persistedQueriesCount: gql_persistedQueriesCount
 	}
 `;
 export const PERSISTED_QUERIES = gql`
 	query persistedQueries {
-		persistedQueries {
+		persistedQueries: gql_persistedQueries {
 			key
 			query
 			addedTime
@@ -17,7 +17,7 @@ export const PERSISTED_QUERIES = gql`
 
 export const SERVICES_LIST = gql`
 	query getServices {
-		services {
+		services: gql_services {
 			id
 			name
 		}
@@ -26,7 +26,7 @@ export const SERVICES_LIST = gql`
 
 export const SERVICE_SCHEMAS = gql`
 	query getServiceVersions($id: Int!, $filter: String) {
-		service(id: $id) {
+		service: gql_service(id: $id) {
 			id
 
 			schemas(limit: 100, filter: $filter) {
@@ -47,7 +47,7 @@ export const SERVICE_SCHEMAS = gql`
 
 export const SCHEMA_DETAILS = gql`
 	query getSchema($schemaId: Int!) {
-		schema(id: $schemaId) {
+		schema: gql_schema(id: $schemaId) {
 			id
 			typeDefs
 			isActive
