@@ -2,4 +2,4 @@
   [context.production.environment]
       PUBLIC_URL = "https://graphql-schema-registry-dashboard.netlify.app"
       REACT_APP_OAUTH_REDIRECT_URI = "https://graphql-schema-registry-dashboard.netlify.app/authenticate"
-      REACT_APP_OAUTH_LOGOUT_URI = "https://auth-staging.team.us/oauth/logout?client_id=graphql-schema-registry-dashboard&redirect_uri=https://graphql-schema-registry-dashboard.netlify.app/signout"
+      REACT_APP_OAUTH_LOGOUT_URI = "https://staging.team.us/oauth/logout?client_id=graphql-schema-registry-dashboard&redirect_uri=https://graphql-schema-registry-dashboard.netlify.app/signout"
